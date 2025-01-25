@@ -1,0 +1,269 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures the body and html take up the full height of the viewport */
+}
+
+.container{
+    display: grid;
+    height: 100vh; /* Sets height to the full viewport height */
+    width: 100vw;
+    grid-template-columns: 1fr 5fr; /* Middle column takes twice as much space as the others */
+    grid-template-rows: 1fr 5fr;  
+}
+
+.side-bar{
+    background-color: #524632;
+    grid-row: 1/4;
+}
+
+.header{
+    background-color: #8f734f;
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+
+
+.sidebar-header{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.7em;
+    color: white;
+    text-align: center;
+}
+
+.sidebar-tools > ul > li{
+    display: flex;
+    color: white;
+    align-items: center;
+    font-family: Macondo, Verdana, Geneva, Tahoma, sans-serif;
+    list-style-type: none;
+    font-size: 1.7em;
+    padding: 10px;
+
+}
+
+svg{
+    fill: white;
+}
+.cards{
+    fill: white;
+}
+
+
+
+i{
+    margin: 10px;
+}
+
+form {
+    background-color: #c3c49e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center children vertically */
+    padding: 0 4px; /* Add horizontal padding if needed */
+    height: 34px; /* Set consistent height */
+    margin: 10px;
+}
+
+input {
+    all: unset;
+    font: 16px system-ui;
+    color: #fff;
+    height: 100%; /* Match the form height */
+    width: 100%;
+    padding: 0 10px; /* Only horizontal padding */
+    line-height: 34px; /* Align text vertically */
+}
+
+::placeholder {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.header > form > button {
+    all: unset;
+    cursor: pointer;
+    width: 34px; /* Match form height for a square button */
+    height: 34px;
+    display: flex; /* Center the SVG inside */
+    justify-content: center;
+    align-items: center;
+}
+
+.search_svg {
+    color: #fff;
+    fill: currentColor;
+    width: 20px; /* Slightly smaller icon size */
+    height: 20px; /* Keep proportions */
+}
+
+.profile{
+    height: 100px;
+    width: 100px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.profile > img{
+    display: flex;
+    align-items: end;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+    position: relative;
+    bottom: 10px;
+}
+
+.notifs{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pic2{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.button-container{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    position: relative;
+    bottom: 10px;
+}
+
+.button-container > button{
+    height: 30%;
+    font-size: 1em;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: green;
+    box-sizing: content-box; /* Ensure padding doesn't affect centering */
+}
+
+.main-content{
+    background-color: tan;
+    grid-row: 2/4;
+    grid-column: 2/4;
+    outline: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(2, 3fr) 2fr;
+    grid-template-rows: 40px repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+}
+
+.main-content > div{
+    margin: 5px;
+}
+
+.contract_header{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    font-size: 1.2em;
+}
+
+p{
+    margin: 5px;
+}
+
+h3{
+    position: relative;
+    left: 15px;
+}
+
+.post1{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: wheat;
+    border-radius: 30px;
+    border-left: 10px solid green;
+}
+
+.post2{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border-radius: 30px;
+    background-color: wheat;
+    border-left: 10px solid green;
+}
+
+.post3{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    border-radius: 30px;
+    background-color: wheat;
+    border-left: 10px solid green;
+}
+
+.post4{
+    grid-row: 2/3;
+    grid-column: 2/2;
+    border-radius: 30px;
+    background-color: wheat;
+    border-left: 10px solid green;
+}
+
+.post5{
+    grid-row: 3/4;
+    grid-column: 2/2;
+    border-radius: 30px;
+    background-color: wheat;
+    border-left: 10px solid green;
+}
+
+.post6{
+    grid-row: 4/5;
+    grid-column: 2/2;
+    border-radius: 30px;
+    background-color: wheat;
+    border-left: 10px solid green;
+}
+
+.announce_title{
+    grid-row: 1/2;
+    grid-column: 3/4;
+    font-size: 1.2em;
+}
+
+.Announcements{
+    grid-row: 2/3;
+    grid-column: 3/4;
+    background-color: wheat;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 1px solid black;
+    margin: 0%;
+    
+}
+
+.Announcements >*{
+    position: relative;
+    padding: 20px;
+}
+
+.Announcements2{
+    grid-row: 3/4;
+    grid-column: 3/4;
+    background-color: wheat;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+
+}
